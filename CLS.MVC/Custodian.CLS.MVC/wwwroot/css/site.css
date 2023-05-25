@@ -228,3 +228,12 @@ ample
 nav-link:hover, nav-item:hover {
   background-color: #830505 !important;
 }
+
+a:hover {
+  color: #757575;
+}
+
+.btn-life {
+  background-color: #A50505;
+  border: 1px solid black
+}
