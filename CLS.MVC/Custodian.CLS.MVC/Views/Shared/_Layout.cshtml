@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Custodian Life Insurance</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/Custodian.CLS.MVC.styles.css" asp-append-version="true" />
+	<script src="https://kit.fontawesome.com/beb513e456.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light">
+		<div class="container">
+			<!-- Navbar Brand -->
+			<a href="https://custodianplc.com.ng" class="navbar-brand" href="#">
+				<img class="retina" src="~/img/logo/logo-white.png" data-logo="~/img/logo/logo-white.png" alt="custodian-logo" height="60" />
+			</a>
+
+			<!-- Toggle Button for Collapsed Navbar -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+							aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
+			</button>
+			<!-- Navigation Links -->
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">ABOUT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">PRODUCT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">FINANCIAL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">FAQ'S</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">DOWNLOAD</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							LOGIN
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item text-dark" href="#">STAFF</a></li>
+							<li><a class="dropdown-item text-dark" href="#">AGENT</a></li>
+							<li><a class="dropdown-item text-dark">POLICY HOLDER</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	@RenderBody()
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

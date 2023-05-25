@@ -1,0 +1,261 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="main-section">
+  <div class="main-section-grid container-fluid">
+    <div class="d-flex align-items-end justify-content-center">
+      <h1 class="mb-0 life-title-text">Life Insurance</h1>
+    </div>
+    <div>
+      <div class="general-box container-fluid w-100 border mt-5 p-0">
+        <ul class="d-flex list-unstyled w-100 container-fluid p-0 m-0">
+          <li class="border flex-grow-1 d-flex align-items-center justify-content-center active-nav-item" style="padding: 20px;">
+            <a href="#product-category" class="nav-text-general-box text-decoration-none">
+              <i class="fa fa-cube" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="border flex-grow-1 d-flex align-items-center justify-content-center" style="padding: 20px;">
+            <a href="#claim-nav" class="nav-text-general-box text-decoration-none">
+              <i class="fa fa-file" aria-hidden="true"></i>
+              Claims
+            </a>
+          </li>
+          <li class="border flex-grow-1 d-flex align-items-center justify-content-center" style="padding: 20px;">
+            <a href="#contact-nav" class="nav-text-general-box text-decoration-none">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+        <div class="products-grid nav-items-contents container-fluid py-5 p-0" id="product-category">
+          <div class="flex-grow-1 d-flex align-items-center text-center justify-content-center">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5">
+                  <img src="~/img/icons/capitalbuilder1.png" width="80">
+                  <h6 style="margin-top: 10px;">Savings and Investment</h6>
+                </div>
+                <div class="flip-card-back w-100">
+                  <a class="flip-list">Capital Builder</a>
+                  <a class="flip-list">Esusu Shield</a>
+                  <a class="flip-list">Investment Plus Plan</a>
+                  <a class="flip-list">Wealth Plus Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-grow-1 d-flex align-items-center text-center justify-content-center">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5">
+                  <img src="~/img/icons/life-n.png" width="80">
+                  <h6 style="margin-top: 10px;">Endowment</h6>
+                </div>
+                <div class="flip-card-back w-100">
+                  <a class="flip-list">Education Endowment</a>
+                  <a class="flip-list">Life Time Harvest</a>
+                  <a class="flip-list">Ordinary Endowment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow-1 d-flex align-items-center text-center justify-content-center">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5">
+                  <img src="~/img/icons/wealth-s.png" width="80">
+                  <h6 style="margin-top: 10px;">Protection Policy</h6>
+                </div>
+                <div class="flip-card-back w-100">
+                  <a class="flip-list">Terms Assurance</a>
+                  <a class="flip-list">Whole Life Assurance</a>
+                  <a class="flip-list">Dignity Plan</a>
+                  <a class="flip-list">Tuition Protection</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-grow-1 d-flex align-items-center text-center justify-content-center">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5">
+                  <img src="~/img/icons/annuity.png" width="80">
+                  <h6 style="margin-top: 10px;">ANNUITY</h6>
+                </div>
+                <div class="flip-card-back w-100">
+                  <a class="flip-list">Retiree Annuity</a>
+                  <a class="flip-list">Immediate Annuity</a>
+                  <a class="flip-list">Deferred Annuity</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-items-contents container-fluid py-5 pt-2 d-none" id="claim-nav">
+        <div class="text-center">
+          <h4 class="wod" style="padding-top: 0;padding-bottom: 0px; margin-bottom: 0px;">
+            <b> Make a Claim, it's fast and easy<br> No Story!</b>
+          </h4>
+          <div class="smart-forms mx-5 px-5">
+            <div class="section py-3">
+              <div class="option-group field " style="text-align: center;">
+                <label class="option px-3">
+                  <input onchange="toggle2();" type="radio" name="claim" id="claim_status_button" checked="">
+                  <span class="radio"></span>Claim Status
+                </label>
+
+                <label class="option px-3">
+                  <input onchange="toggle1();" type="radio" name="claim" id="make_claim_button">
+                  <span class="radio"></span>  Make a Claim
+                </label>
+              </div>
+            </div>
+
+            <form method="post" action="https://custodianplc.com.ng/subsidiaries/makeclaim" class="container d-none" id="make_claim_form">
+              <div class="form-body" style="padding-top: 0px;">
+                <div class="grid-container">
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field prepend-icon w-100">
+                        <input required="required" type="text" style="height:40px" name="fullname" id="fullname" class="gui-input gui-input-style w-100" placeholder="Full Name" value="">
+                        <span class="field-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field prepend-icon w-100">
+                        <input required="required" style="height:40px" type="email" name="email" id="email" class="gui-input gui-input-style w-100" placeholder="Email" value="">
+                        <span class="field-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field prepend-icon w-100">
+                        <input type="tel" style="height:40px" name="policy_number" id="policy_number" required="required" class="gui-input gui-input-style w-100" placeholder="Policy No" value="">
+                        <span class="field-icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="grid-container-two mt-3">
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field w-100">
+                        <input required="required" style="height:40px" type="text" name="phone_number" id="phone_number" class="gui-input w-100" placeholder="Mobile No" value="">
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field w-100">
+                        <input required="required" style="height:40px" type="date" name="incident_date" id="incident_date" class="gui-input w-100" placeholder="Date of Loss" value="">
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="grid-item">
+                    <div class="section">
+                      <label class="field prepend-icon w-100">
+                        <textarea required="required" name="incident_report" id="incident_report" class="gui-textarea w-100" placeholder="Report an Incident" style="height: 80px; resize: none; overflow-y: auto; overflow-x: hidden;"></textarea>
+                        <span class="field-icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="grid-item">
+                    <div class="section">
+                      <button type="submit" class="button btn-primary p-2 text-white" style="float:left; background-color:#A50505">Make a Claim</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <form method="post" id="claim_status_form" class="active container p-3">
+              <div class="form-body" style="padding-top: 0px;">
+                <div class="section">
+                  <label class="field prepend-icon fieid-width">
+                    <input type="text" name="claim_number" id="claim_number" style="height:40px" class="gui-input gui-input-style w-100" placeholder="Enter Claim Number">
+                    <span class="field-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  </label>
+                </div>
+              </div>
+              <div id="claimResult" style="display: none;">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Claim No::</td>
+                      <td>Policy No:: </td>
+                      <td>Claim Status::</td>
+                    </tr>
+                    <tr>
+                      <td><span id="pre_claim_no"></span></td>
+                      <td><span id="pre_policy_no"></span></td>
+                      <td><span id="pre_claim_status"></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button type="submit" class="button mt-4 p-2 text-white" style="background-color:#A50505">Check Status</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="nav-items-contents container-fluid d-none" id="contact-nav">
+        <h4 class="wod text-center pb-0 mb-0" style="padding-top: 5px;"><b> Need help ?<br> Please fill the form below</b> </h4>
+        <div class="smart-forms text-center">
+          <form method="post" action="https://custodianplc.com.ng/subsidiaries/contact" id="" class=" text-center">
+            <input type="hidden" name="_token" value="7ts4GWs4hm9odKHaynIZZiQmHlbU6hjUdR8luyZR">
+            <input type="hidden" name="subsidiary" id="subsidiary" value="CLA">
+            <input type="hidden" name="redirect" id="redirect" value="subsidiaries.lifeinsurance">
+            <div class="form-body text-center container p-3 pt-1" style="padding-top: 0px;">
+              <div class="grid-container-three container px-5 text-center">
+                <div class="grid-item w-75 mx-auto">
+                  <div class="section">
+                    <label class="field prepend-icon w-100">
+                      <input type="text" name="fullname" style="height:40px" id="fullname" required="" class="gui-input gui-input-style w-100" placeholder="Full Name">
+                      <span class="field-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-item  w-75 mx-auto">
+                  <div class="section">
+                    <label class="field prepend-icon w-100">
+                      <input type="text" name="fullname" style="height:40px" id="fullname" required="" class="gui-input gui-input-style w-100" placeholder="Full Name">
+                      <span class="field-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-item w-75 mx-auto">
+                  <div class="section">
+                    <label class="field prepend-icon w-100">
+                      <input type="tel" name="phone_number" style="height:40px" id="phone_number" required="" class="gui-input gui-input-style w-100" placeholder="Phone">
+                      <span class="field-icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="section w-75 mx-auto">
+                  <label class="field prepend-icon w-100">
+                    <textarea class="gui-textarea gui-input-style w-100" required="" id="feedback" name="feedback" placeholder="Feedback message" style="height: 80px; resize: none; overflow-y: auto; overflow-x: hidden;"></textarea>
+                    <span class="field-icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="button p-3 text-white" style="background-color:#A50505">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</section>
