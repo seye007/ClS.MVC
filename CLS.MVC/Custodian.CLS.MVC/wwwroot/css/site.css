@@ -158,7 +158,9 @@ nav-link:hover {
 }
 
 ample
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* The flip card container - set the width and height to whatever you want. We have added
+  the border property to demonstrate that the flip itself goes out of the box on hover
+  (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -236,4 +238,47 @@ a:hover {
 .btn-life {
   background-color: #A50505;
   border: 1px solid black
+}
+
+
+
+
+.modal-header {
+  background-color: #f9f9f9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.modal-body {
+  padding: 25px 30px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.buy-policy-button {
+  background-color: #a42f33;
+  color: white
+}
+
+  .buy-policy-button:hover {
+    background-color: #781c1f;
+    color: white
+  }
+
+.special-heading-inner {
+  border-bottom: 2px solid #e8e8e8;
+}
+
+  .special-heading-inner span {
+    border-bottom: 2px solid #A50505
+  }
+
+.modal-close-button {
+  background-color: #e4e4e4;
 }
